@@ -1,5 +1,5 @@
 .mat-select {
-  padding-top: 0;
+  padding-top: 3px;
   padding-left: 10px;
   height: 35px;
   width: 100%;
@@ -69,26 +69,14 @@ input.ng-invalid.ng-touched {
   color: #CC0000;
 }
 
-::ng-deep .md-select-value .md-select-icon {
-  background: #fff url("http://via.placeholder.com/20x20") no-repeat 90% 50%;
-  color: white;
-  text-align: left;
-  margin: 0 0 0 0;
-}
-
-////::ng-deep
-//.mat-select-required .mat-select-placeholder::after {
-//  display: none;
-//  //content: '*';
+//::ng-deep .md-select-value .md-select-icon {
+//  background: #fff url("http://via.placeholder.com/20x20") no-repeat 90% 50%;
+//  color: white;
+//  text-align: left;
+//  margin: 0 0 0 0;
 //}
 
-//::ng-deep
-.mat-select-underline {
-  display: none;
-}
-
-//::ng-deep
-.mat-select-arrow, .mat-select-disabled .mat-select-value, .mat-select-trigger {
+::ng-deep .mat-select-arrow, .mat-select-disabled .mat-select-value, .mat-select-trigger {
   display: none;
 }
 
@@ -103,16 +91,28 @@ input.ng-invalid.ng-touched {
   background: rgba(222, 0, 0, .22)
 }
 
+.righthand-select-icon {
+  z-index: 0;
+  float: right;
+  position: relative;
+  bottom: -7px;
+  right: -40px;
+  cursor: pointer;
+  height: 0;
+  //border: solid 1px green;
 
-md-input-container.md-icon-float > md-icon + md-select {
-  margin-left:36px;
+  .arrow-up {
+    position: relative;
+    bottom: 3px;
+    color: #555555;
+  }
+
+  .arrow-down {
+    position: relative;
+    right: 28px;
+    top: 3px;
+    color: #555555;
+  }
 }
 
-md-input-container.md-icon-float.md-input-has-value > md-icon + md-select {
-  padding-top:24px;
-}
 
-
-md-input-container > md-icon + md-select {
-  margin-left: 36px;
-}

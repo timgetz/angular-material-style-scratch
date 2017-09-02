@@ -17,12 +17,16 @@
 
 
 <div class="page-container">
-  <md-input-container class="md-block">
-    <md-icon>location_on</md-icon>
+  <md-input-container>
+    <span class="righthand-select-icon" >
+      <md-icon class="arrow-up">arrow_drop_up</md-icon>
+      <md-icon class="arrow-down">arrow_drop_down</md-icon>
+    </span>
     <md-select [(ngModel)]="selectedItem3"
                name="selectedItem"
                floatPlaceholder="never"
                required>
+      <md-option></md-option>
       <md-option *ngFor="let type of exampleList" [value]="type">
         {{ type }}
       </md-option>

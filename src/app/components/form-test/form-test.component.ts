@@ -5,11 +5,25 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './form-test.component.html',
   styleUrls: ['./form-test.component.scss']
 })
-export class FormTestComponent implements OnInit {
+export class FormTestComponent   implements OnInit {
 
-  constructor() { }
+  title = 'bpa';
 
-  ngOnInit() {
+  selectedItem = '';
+  selectedItem2 = '';
+  inputText = '';
+
+  exampleList: string[] = [
+    'one1',
+    'two1',
+    'three1',
+    'four1'
+  ];
+
+  constructor() {}
+
+  ngOnInit(): void {
+
   }
 
 }

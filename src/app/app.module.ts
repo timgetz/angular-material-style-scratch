@@ -7,11 +7,13 @@ import { FormTestComponent } from './components/form-test/form-test.component';
 import { FormsModule } from '@angular/forms';
 import { MdSelectModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormTestTwoComponent } from './components/form-test-two/form-test-two.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormTestComponent
+    FormTestComponent,
+    FormTestTwoComponent
   ],
   imports: [
     BrowserModule,

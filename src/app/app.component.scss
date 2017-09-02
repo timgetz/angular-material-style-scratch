@@ -1,63 +1,15 @@
-.page-container {
-  margin: 20px;
-}
-
-
-.page-container-small {
-  margin: 20px;
-  max-width: 200px;
-}
-
-.mat-select {
-  padding-top: 0px;
-  padding-left: 10px;
-  height: 35px;
-  width: 100%;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  border: solid 1px #CCCCCC;
-
-  .ng-invalid.ng-touched {
-    background-color: #FAE6E6;
-    border: 1px solid #CC0000;
-    color: #CC0000;
-  }
-}
-
-.mat-select.ng-invalid.ng-touched {
-  background-color: #FAE6E6;
-  border: 1px solid #CC0000;
-  color: #CC0000;
-}
-
-input.ng-invalid.ng-touched {
-  background-color: #FAE6E6;
-  border: 1px solid #CC0000;
-  color: #CC0000;
-}
-
-::ng-deep .mat-select-required .mat-select-placeholder::after {
-  display: none;
-  //content: '*';
-}
-
-::ng-deep .mat-select-underline {
-  display: none;
-}
-
-::ng-deep  .mat-select-arrow, .mat-select-disabled .mat-select-value, .mat-select-trigger {
-  display: none;
-}
-
-// Dropdown option selected text
-::ng-deep .mat-primary .mat-option.mat-selected {
-  color: green;
-}
-
-// Dropdown option focus background
-.mat-option:focus:not(.mat-option-disabled), .mat-option:hover:not(.mat-option-disabled) {
-  background: rgba(222, 0, 0, .22)
-}
-
+//@import "../assets/material-select";
+//
+//.page-container {
+//  margin: 20px;
+//}
+//
+//
+//.page-container-small {
+//  margin: 20px;
+//  max-width: 200px;
+//}
+//
 
 //.mat-select-trigger {
 //  font-size: 35px

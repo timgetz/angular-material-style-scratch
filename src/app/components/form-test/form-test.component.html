@@ -1,16 +1,31 @@
 <p>
   form-test works! should be a select below
 </p>
-
+<md-icon>chevron_left</md-icon>
 <div class="page-container">
   <md-select [(ngModel)]="selectedItem"
              name="selectedItem"
              floatPlaceholder="never"
              required>
     <md-option></md-option>
-    <md-option *ngFor="let type of exampleList " [value]="type">
+    <md-option *ngFor="let type of exampleList" [value]="type">
       {{ type }}
     </md-option>
 
   </md-select>
+</div>
+
+
+<div class="page-container">
+  <md-input-container class="md-block">
+    <md-icon>location_on</md-icon>
+    <md-select [(ngModel)]="selectedItem3"
+               name="selectedItem"
+               floatPlaceholder="never"
+               required>
+      <md-option *ngFor="let type of exampleList" [value]="type">
+        {{ type }}
+      </md-option>
+    </md-select>
+  </md-input-container>
 </div>

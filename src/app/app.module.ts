@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormTestComponent } from './components/form-test/form-test.component';
 import { FormsModule } from '@angular/forms';
-import { MdSelectModule } from '@angular/material';
+import { MdIconModule, MdSelectModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormTestTwoComponent } from './components/form-test-two/form-test-two.component';
 
@@ -20,7 +20,8 @@ import { FormTestTwoComponent } from './components/form-test-two/form-test-two.c
     AppRoutingModule,
     FormsModule,
     MdSelectModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MdIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

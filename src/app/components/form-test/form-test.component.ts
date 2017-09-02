@@ -11,6 +11,7 @@ export class FormTestComponent   implements OnInit {
 
   selectedItem = '';
   selectedItem2 = '';
+  selectedItem3 = '';
   inputText = '';
 
   exampleList: string[] = [

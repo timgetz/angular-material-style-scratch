@@ -3,20 +3,16 @@
   padding-left: 10px;
   height: 35px;
   width: 100%;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  //font-family: Roboto, "Helvetica Neue", sans-serif;
   border: solid 1px #CCCCCC;
+  background: white;
 
-  .ng-invalid.ng-touched {
-    background-color: #FAE6E6;
-    border: 1px solid #CC0000;
-    color: #CC0000;
-  }
-
+  // Remove material select underline style
   ::ng-deep .mat-select-underline {
     display: none;
   }
 
-  // Add default focus ring to material component
+  // Add default focus ring to material select component
   &:focus:not(.mat-select-disabled) {
     outline-color: -webkit-focus-ring-color;
     outline-style: auto;
@@ -24,27 +20,62 @@
   }
 }
 
-//.md-select-value .md-select-icon:after {
-//  font-family: Material Icons;
-//  font-size: 24px;
-//  content: 'keyboard_arrow_down';
-//  display: inline;
-//  top: 5px;
-//  transform: scale(1);
-//  font-feature-settings: 'liga'; /* Support for IE. From material-icons.css. */
-//}
-
 // Remove required * from select box
 ::ng-deep .mat-select-required .mat-select-placeholder::after {
   display: none;
   //content: '*';
 }
 
+// Remove material select arrow icon
+::ng-deep .mat-select-arrow, .mat-select-disabled .mat-select-value, .mat-select-trigger {
+  display: none;
+}
+
+// Dropdown option selected text
+::ng-deep .mat-primary .mat-option.mat-selected {
+  color: black;
+}
+
+// Dropdown option focus background
+.mat-option:focus:not(.mat-option-disabled), .mat-option:hover:not(.mat-option-disabled) {
+  background: rgba(0, 255, 0, .5)
+}
+
+// Invalid and touched style for matrial select component
 .mat-select.ng-invalid.ng-touched {
   background-color: #FAE6E6;
   border: 1px solid #CC0000;
   color: #CC0000;
 }
+
+// Up/Down arrow combined icon for material select component
+.righthand-select-icon {
+  z-index: 0;
+  float: right;
+  position: relative;
+  bottom: -7px;
+  right: -40px;
+  cursor: pointer;
+  height: 0;
+
+  .arrow-up {
+    position: relative;
+    bottom: 3px;
+    color: #555555;
+  }
+
+  .arrow-down {
+    position: relative;
+    right: 28px;
+    top: 3px;
+    color: #555555;
+  }
+}
+
+//::ng-deep .mat-select-invalid .righthand-select-icon, .mat-select-invalid .mat-select-trigger, .mat-select:focus:not(.mat-select-disabled).mat-warn .righthand-select-icon, .mat-select:focus:not(.mat-select-disabled).mat-warn .mat-select-trigger {
+//  color: #f44336
+//}
+
 
 //.mat-select:focus:not(.mat-select-disabled).mat-primary .mat-select-arrow, .mat-select:focus:not(.mat-select-disabled).mat-primary .mat-select-trigger {
 //  color: darkorange;
@@ -63,56 +94,17 @@
 
 
 
-input.ng-invalid.ng-touched {
-  background-color: #FAE6E6;
-  border: 1px solid #CC0000;
-  color: #CC0000;
-}
-
-//::ng-deep .md-select-value .md-select-icon {
-//  background: #fff url("http://via.placeholder.com/20x20") no-repeat 90% 50%;
-//  color: white;
-//  text-align: left;
-//  margin: 0 0 0 0;
+//input.ng-invalid.ng-touched {
+//  background-color: #FAE6E6;
+//  border: 1px solid #CC0000;
+//  color: #CC0000;
 //}
 
-::ng-deep .mat-select-arrow, .mat-select-disabled .mat-select-value, .mat-select-trigger {
-  display: none;
-}
 
-// Dropdown option selected text
-//::ng-deep
-.mat-primary .mat-option.mat-selected {
-  color: green;
-}
 
-// Dropdown option focus background
-.mat-option:focus:not(.mat-option-disabled), .mat-option:hover:not(.mat-option-disabled) {
-  background: rgba(222, 0, 0, .22)
-}
 
-.righthand-select-icon {
-  z-index: 0;
-  float: right;
-  position: relative;
-  bottom: -7px;
-  right: -40px;
-  cursor: pointer;
-  height: 0;
-  //border: solid 1px green;
 
-  .arrow-up {
-    position: relative;
-    bottom: 3px;
-    color: #555555;
-  }
 
-  .arrow-down {
-    position: relative;
-    right: 28px;
-    top: 3px;
-    color: #555555;
-  }
-}
+
 
 

@@ -3,7 +3,7 @@
 </p>
 <!--<md-icon>chevron_left</md-icon>-->
 
-<form (ngSubmit)="onSubmit()" (keydown.enter)="$event.preventDefault()" #f="ngForm">
+<!--<form #f="ngForm">-->
 
   <div class="page-container">
     <md-select [(ngModel)]="selectedItem"
@@ -23,7 +23,7 @@
     <div>
       <label>Select this</label>
     </div>
-    <md-input-container>
+    <div>
       <span class="righthand-select-icon" >
         <md-icon class="arrow-up">arrow_drop_up</md-icon>
         <md-icon class="arrow-down">arrow_drop_down</md-icon>
@@ -37,11 +37,11 @@
           {{ type }}
         </md-option>
       </md-select>
-    </md-input-container>
+    </div>
   </div>
 
-  <p>form is valid: {{f.valid}}</p>
-  <p>form is dirty: {{f.dirty}}</p>
-  <p>form is touched: {{f.touched}}</p>
+  <!--<p>form is valid: {{f.valid}}</p>-->
+  <!--<p>form is dirty: {{f.dirty}}</p>-->
+  <!--<p>form is touched: {{f.touched}}</p>-->
 
-</form>
+<!--</form>-->

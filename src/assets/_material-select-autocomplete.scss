@@ -1,0 +1,139 @@
+//input {
+//  height: 35px;
+//  width: 100%;
+//  //font-family: Roboto, "Helvetica Neue", sans-serif;
+//  border: solid 1px #CCCCCC;
+//  background: white;
+//  padding-top: 3px;
+//  padding-left: 10px;
+//}
+
+
+input.ng-invalid.ng-touched {
+  background-color: #FAE6E6;
+  border: 1px solid #CC0000;
+  color: #CC0000;
+}
+
+//.select-state {
+//  display: block;
+////  width: 200px;
+////  margin: 0;
+//}
+
+//::ng-deep .mat-input-underline {
+//  display: none;
+//}
+
+//md-input-container {
+//  width: 100%;
+//  max-height: 35px !important;
+//  margin: 0 !important;
+//}
+
+
+//input.ng-invalid.ng-touched {
+//  background-color: #FAE6E6;
+//  border: 1px solid #CC0000;
+//  color: #CC0000;
+//}
+
+//.righthand-select-icon {
+//  z-index: 0;
+//  float: right;
+//  //position: relative;
+//  display: inline-block;
+//  //bottom: -7px;
+//  //right: 400px;
+//  cursor: pointer;
+//  height: 0;
+//
+//  .arrow-up {
+//    display: inline-block;
+//    //position: relative;
+//    bottom: 3px;
+//    color: #555555;
+//  }
+//
+//  .arrow-down {
+//    display: inline-block;
+//    //position: relative;
+//    //right: 28px;
+//    //top: 3px;
+//    color: #555555;
+//  }
+//}
+
+//.mat-form-field-infix {
+//
+//}
+
+//.input-autocomplete-container {
+//  //height: 35px;
+//  width: 100%;
+//  border: solid 1px #CCCCCC;
+//  position: relative;
+//  padding:0;
+//  margin:0;
+//  background: white;
+//
+//  .righthand-select-icon {
+//    position:absolute;
+//    top:0px;
+//    //right:40px;
+//    //width:40px;
+//    //height:40px;
+//
+//    .arrow-up {
+//      //display: inline-block;
+//      //position: relative;
+//      bottom: 3px;
+//      color: #555555;
+//    }
+//
+//    .arrow-down {
+//      //display: inline-block;
+//      //position: relative;
+//      right: 28px;
+//      top: 3px;
+//      color: #555555;
+//    }
+//  }
+//}
+
+
+
+.auto-complete-container {
+  //height:30px;
+  //width:300px;
+  position:relative;
+
+  input {
+    height:35px;
+    width: 100%;
+    //margin:0;
+    padding-left: 10px;
+  }
+}
+
+.input-right-icons {
+  height:15px;
+  position:absolute;
+  right:0;
+  top:5px;
+
+  .arrow-up {
+    position: relative;
+    bottom: 3px;
+    color: #555555;
+  }
+
+  .arrow-down {
+    position: relative;
+    right: 28px;
+    top: 3px;
+    color: #555555;
+  }
+
+}
+

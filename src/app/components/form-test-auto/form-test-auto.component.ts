@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import { AfterViewInit, Component, OnInit} from '@angular/core';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { EnumToArrayPipe } from '../../pipes/toArray.pipe';
 import { USAStatesList } from '../../pipes/enums';
 
@@ -12,9 +12,9 @@ import 'rxjs/add/operator/map';
   templateUrl: './form-test-auto.component.html',
   styleUrls: ['./form-test-auto.component.scss']
 })
-export class FormTestAutoComponent   implements OnInit {
+export class FormTestAutoComponent   implements OnInit, AfterViewInit {
 
-  stateControl: FormControl;
+  myform: FormGroup;
 
   filteredStates: any;
 
@@ -22,12 +22,9 @@ export class FormTestAutoComponent   implements OnInit {
 
   public usStates = new EnumToArrayPipe().transform(USAStatesList);
 
-  constructor() {
-    this.stateControl = new FormControl('',Validators.required);
-    this.filteredStates = this.stateControl.valueChanges
-      .startWith(null)
-      .map(name => this.filterStates(name));
-  }
+  constructor(
+    private formBuilder: FormBuilder
+  ) {}
 
   filterStates(val: string) {
     return val ? this.usStates.filter(state => state.label.toLowerCase().indexOf(val.toLowerCase()) !== -1)
@@ -35,7 +32,24 @@ export class FormTestAutoComponent   implements OnInit {
   }
 
   ngOnInit(): void {
+    this.myform = this.formBuilder.group({
+      stateControl: ['', Validators.required ]
+    });
 
+    this.filteredStates = this.myform.controls.stateControl.valueChanges
+      .startWith(null)
+      .map(name => this.filterStates(name));
+  }
+
+  ngAfterViewInit() {
+    this.filteredStates = this.myform.controls.stateControl.valueChanges
+      .startWith(null)
+      .map(name => this.filterStates(name));
+    // this.myform.controls.stateControl.valueChanges.subscribe() (
+    //   () => {
+    //     console.log(this.myform.controls.stateControl.value)
+    //   }
+    // )
   }
 
 }

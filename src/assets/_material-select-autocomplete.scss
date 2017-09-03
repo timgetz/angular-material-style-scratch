@@ -1,105 +1,3 @@
-//input {
-//  height: 35px;
-//  width: 100%;
-//  //font-family: Roboto, "Helvetica Neue", sans-serif;
-//  border: solid 1px #CCCCCC;
-//  background: white;
-//  padding-top: 3px;
-//  padding-left: 10px;
-//}
-
-
-input.ng-invalid.ng-touched {
-  background-color: #FAE6E6;
-  border: 1px solid #CC0000;
-  color: #CC0000;
-}
-
-//.select-state {
-//  display: block;
-////  width: 200px;
-////  margin: 0;
-//}
-
-//::ng-deep .mat-input-underline {
-//  display: none;
-//}
-
-//md-input-container {
-//  width: 100%;
-//  max-height: 35px !important;
-//  margin: 0 !important;
-//}
-
-
-//input.ng-invalid.ng-touched {
-//  background-color: #FAE6E6;
-//  border: 1px solid #CC0000;
-//  color: #CC0000;
-//}
-
-//.righthand-select-icon {
-//  z-index: 0;
-//  float: right;
-//  //position: relative;
-//  display: inline-block;
-//  //bottom: -7px;
-//  //right: 400px;
-//  cursor: pointer;
-//  height: 0;
-//
-//  .arrow-up {
-//    display: inline-block;
-//    //position: relative;
-//    bottom: 3px;
-//    color: #555555;
-//  }
-//
-//  .arrow-down {
-//    display: inline-block;
-//    //position: relative;
-//    //right: 28px;
-//    //top: 3px;
-//    color: #555555;
-//  }
-//}
-
-//.mat-form-field-infix {
-//
-//}
-
-//.input-autocomplete-container {
-//  //height: 35px;
-//  width: 100%;
-//  border: solid 1px #CCCCCC;
-//  position: relative;
-//  padding:0;
-//  margin:0;
-//  background: white;
-//
-//  .righthand-select-icon {
-//    position:absolute;
-//    top:0px;
-//    //right:40px;
-//    //width:40px;
-//    //height:40px;
-//
-//    .arrow-up {
-//      //display: inline-block;
-//      //position: relative;
-//      bottom: 3px;
-//      color: #555555;
-//    }
-//
-//    .arrow-down {
-//      //display: inline-block;
-//      //position: relative;
-//      right: 28px;
-//      top: 3px;
-//      color: #555555;
-//    }
-//  }
-//}
 
 
 
@@ -114,26 +12,63 @@ input.ng-invalid.ng-touched {
     //margin:0;
     padding-left: 10px;
   }
-}
 
-.input-right-icons {
-  height:15px;
-  position:absolute;
-  right:0;
-  top:5px;
-
-  .arrow-up {
-    position: relative;
-    bottom: 3px;
-    color: #555555;
+  input.ng-invalid.ng-touched {
+    background-color: #FAE6E6;
+    border: 1px solid #CC0000;
+    color: #CC0000;
   }
 
-  .arrow-down {
-    position: relative;
-    right: 28px;
-    top: 3px;
-    color: #555555;
+  .input-right-icons {
+    height:35px;
+    position:absolute;
+    right:-42px;
+    top:8px;
+
+    .arrow-up {
+      position: relative;
+      bottom: 3px;
+      color: #555555;
+    }
+
+    .arrow-down {
+      position: relative;
+      right: 28px;
+      top: 3px;
+      color: #555555;
+    }
+
   }
 
 }
 
+// Dropdown option selected text
+::ng-deep .mat-primary .mat-option.mat-selected {
+  color: orangered;
+}
+
+// Dropdown option focus background
+::ng-deep .mat-option:focus:not(.mat-option-disabled), .mat-option:hover:not(.mat-option-disabled) {
+  background: rgba(0, 255, 0, .5)
+}
+
+//::ng-deep .mat-autocomplete-panel {
+//  background: #fff;
+//  color: rgba(0, 255, 0, .5)
+//}
+
+::ng-deep .mat-autocomplete-panel .mat-option.mat-selected:not(.mat-active):not(:hover) {
+  background: rgba(0, 255, 0, .5);
+  //color: rgba(0, 255, 0, .5)
+  color: rgba(0, 0, 0, .87)
+}
+
+::ng-deep .mat-option.mat-selected:not(.mat-option-multiple) {
+  //background: rgba(0, 0, 0, .04)
+  background: rgba(0, 255, 0, .25);
+}
+
+::ng-deep .mat-option.mat-active {
+  background: rgba(0, 255, 0, .5);
+  color: rgba(0, 0, 0, .87)
+}

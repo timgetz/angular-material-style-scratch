@@ -1,34 +1,41 @@
 <p>
   form-test Auto works! should be a select below
 </p>
-<form #fa="ngForm">
+<form [formGroup]="myform" #fa="ngForm">
+    <div class="form-group">
 
-  <div class="page-container">
 
-    <div class="auto-complete-container">
-      <span class="input-right-icons">
-        <md-icon class="arrow-up">arrow_drop_up</md-icon>
-        <md-icon class="arrow-down">arrow_drop_down</md-icon>
-      </span>
-      <input id="input"
-             #myInput
-             (click)="myInput.select()"
-             [mdAutocomplete]="stateAuto"
-             [formControl]="stateControl"
-             [(ngModel)]="selectedState"
-             name="selectedState"
-             >
+      <div class="page-container">
+
+        <div class="auto-complete-container">
+          <span class="input-right-icons">
+            <md-icon class="arrow-up">arrow_drop_up</md-icon>
+            <md-icon class="arrow-down">arrow_drop_down</md-icon>
+          </span>
+          <input id="input"
+                 class="form-control"
+                 #myInput
+                 (click)="myInput.select()"
+                 [mdAutocomplete]="stateAuto"
+                 formControlName="stateControl"
+                 name="selectedState"
+                 >
+        </div>
+        <md-autocomplete #stateAuto="mdAutocomplete">
+          <md-option *ngFor="let state of filteredStates | async" [value]="state.label">
+            {{ state.label }}
+          </md-option>
+        </md-autocomplete>
+
+      </div>
+
+      <!--<p>stateControl is valid: {{stateControl.status}}</p>-->
+      <p>form is valid: {{fa.valid}}</p>
+      <p>form is dirty: {{fa.dirty}}</p>
+      <p>form is touched: {{fa.touched}}</p>
+
     </div>
-    <md-autocomplete #stateAuto="mdAutocomplete">
-      <md-option *ngFor="let state of filteredStates | async" [value]="state.label">
-        {{ state.label }}
-      </md-option>
-    </md-autocomplete>
 
-  </div>
+  <pre>myform.value={{myform.value | json}}</pre>
 
-  <p>stateControl is valid: {{stateControl.status}}</p>
-  <p>form is valid: {{fa.valid}}</p>
-  <p>form is dirty: {{fa.dirty}}</p>
-  <p>form is touched: {{fa.touched}}</p>
 </form>

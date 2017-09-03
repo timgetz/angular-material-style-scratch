@@ -22,6 +22,13 @@ export class FormTestAutoComponent   implements OnInit, AfterViewInit {
 
   public usStates = new EnumToArrayPipe().transform(USAStatesList);
 
+  exampleList: string[] = [
+    'one1',
+    'two1',
+    'three1',
+    'four1'
+  ];
+
   constructor(
     private formBuilder: FormBuilder
   ) {}
@@ -33,7 +40,8 @@ export class FormTestAutoComponent   implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.myform = this.formBuilder.group({
-      stateControl: ['', Validators.required ]
+      stateControl: ['', Validators.required ],
+      selectTestControl: ['', Validators.required]
     });
 
     this.filteredStates = this.myform.controls.stateControl.valueChanges

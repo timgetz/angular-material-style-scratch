@@ -4,6 +4,27 @@
 <form [formGroup]="myform" #fa="ngForm">
     <div class="form-group">
 
+      <div class="page-container">
+        <div>
+          <label>Select this</label>
+        </div>
+        <div>
+      <span class="righthand-select-icon" >
+        <md-icon class="arrow-up">arrow_drop_up</md-icon>
+        <md-icon class="arrow-down">arrow_drop_down</md-icon>
+      </span>
+          <md-select class="form-control"
+                     formControlName="selectTestControl"
+                     floatPlaceholder="never">
+            <md-option></md-option>
+            <md-option *ngFor="let type of exampleList" [value]="type">
+              {{ type }}
+            </md-option>
+          </md-select>
+        </div>
+      </div>
+
+
 
       <div class="page-container">
 

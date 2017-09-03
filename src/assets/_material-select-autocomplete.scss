@@ -9,8 +9,10 @@
   input {
     height:35px;
     width: 100%;
-    //margin:0;
-    padding-left: 10px;
+    margin:0;
+    padding-left: 9px;
+    //border: none;
+    border: 1px solid #CCCCCC;
   }
 
   input.ng-invalid.ng-touched {
